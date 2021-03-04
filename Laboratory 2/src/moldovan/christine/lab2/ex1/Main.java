@@ -11,12 +11,15 @@ public class Main {
         System.out.println("Second number: ");
         int y = in.nextInt();
 
-        System.out.println("x="+x+" y="+y);
+        System.out.println("x=" + x + " y=" + y);
 
-        if(x > y)
-            System.out.println(x+" is greater than "+y);
-        else
-            System.out.println(y+" is greater than "+x);
+        if (x > y)
+            System.out.println(x + " is greater than " + y);
+        else if (x < y)
+            System.out.println(y + " is greater than " + x);
+        if (x == y) {
+            System.out.println("Numbers are equal");
+        }
     }
 
 }
