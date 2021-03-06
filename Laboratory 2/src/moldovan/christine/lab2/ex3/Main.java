@@ -9,6 +9,7 @@ public class Main {
         int a;
         int b;
         int check;
+        int counter = 0;
         System.out.println("Lower bound:");
         a = in.nextInt();
         System.out.println("Upper bound:");
@@ -27,9 +28,12 @@ public class Main {
                     break;
                 }
             }
-            if (check == 1)
+            if (check == 1) {
+                counter++;
                 System.out.print(i + " ");
+            }
         }
+        System.out.println("\nTotal nr:" + counter);
 
     }
 }
