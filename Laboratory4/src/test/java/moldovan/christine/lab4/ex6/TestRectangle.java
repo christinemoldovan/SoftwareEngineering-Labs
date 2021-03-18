@@ -11,6 +11,8 @@ public class TestRectangle {
         assertEquals(1.0, r1.getWidth());
         assertEquals(1.0, r1.getLength());
         assertEquals("A rectangle with width=1.0 and length=1.0, which is a subclass of A shape with color of red and it's true", r1.toString());
+        assertEquals(4.0, r1.getPerimeter(), 0.01);
+        assertEquals(1.0, r1.getArea());
 
         Rectangle r2 = new Rectangle(2.0, 4.5);
         r2.setWidth(2.5);

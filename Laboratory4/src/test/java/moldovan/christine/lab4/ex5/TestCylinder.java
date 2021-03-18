@@ -17,6 +17,9 @@ public class TestCylinder {
         assertEquals(1, c2.getHeight());
         assertEquals(3.14, c2.getVolume(), 0.01);
 
+        Cylinder c3 = new Cylinder(3);
+        assertEquals(56.54, c3.getArea(), 0.01);
+
 
     }
 }
