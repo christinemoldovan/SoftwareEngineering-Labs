@@ -16,7 +16,7 @@ public class TestBookAuthor {
 
         Book b = new Book("Harry Potter", a, 25.99, 20);
         assertEquals("Harry Potter", b.getName());
-        assertEquals(a, b.getAuthor()); // ?????
+        assertEquals(a, b.getAuthor());
         assertEquals(25.99, b.getPrice());
         assertEquals(20, b.getQtyInStock());
     }
