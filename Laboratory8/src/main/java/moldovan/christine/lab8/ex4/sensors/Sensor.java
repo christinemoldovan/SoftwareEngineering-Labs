@@ -1,4 +1,4 @@
-package moldovan.christine.lab8.ex4;
+package moldovan.christine.lab8.ex4.sensors;
 
 abstract class Sensor {
     Sensor sensorType;
@@ -9,6 +9,5 @@ abstract class Sensor {
         return sensorType;
     }
 
-    public void handleSituation(boolean status){}
 
 }

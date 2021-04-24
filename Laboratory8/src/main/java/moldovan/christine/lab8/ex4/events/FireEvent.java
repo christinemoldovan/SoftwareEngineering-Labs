@@ -1,14 +1,14 @@
-package moldovan.christine.lab8.ex4;
+package moldovan.christine.lab8.ex4.events;
 
-public class FireEvent extends Event{
+public class FireEvent extends Event {
     private boolean smoke;
 
-    FireEvent(boolean smoke) {
+    public FireEvent(boolean smoke) {
         super(EventType.FIRE);
         this.smoke = smoke;
     }
 
-    boolean isSmoke() {
+    public boolean isSmoke() {
         return smoke;
     }
 

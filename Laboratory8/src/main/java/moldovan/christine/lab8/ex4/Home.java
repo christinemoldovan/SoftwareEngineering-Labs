@@ -1,8 +1,14 @@
 package moldovan.christine.lab8.ex4;
 
+import moldovan.christine.lab8.ex4.events.Event;
+import moldovan.christine.lab8.ex4.events.FireEvent;
+import moldovan.christine.lab8.ex4.events.NoEvent;
+import moldovan.christine.lab8.ex4.events.TemperatureEvent;
+import moldovan.christine.lab8.ex4.sensors.FireSensor;
+
 import java.util.Random;
 
-abstract class Home {
+public abstract class Home {
     private Random r = new Random();
     private final int SIMULATION_STEPS = 20;
 
@@ -14,15 +20,8 @@ abstract class Home {
         int k = r.nextInt(100);
         if(k<30)
             return new NoEvent();
-        else if(k>60){
-            FireEvent fireEvent=new FireEvent(r.nextBoolean());
-            FireSensor fireSensor=new FireSensor();
-            if(fireEvent.isSmoke()==true){
-                fireSensor.handleSituation(true);
-                return fireEvent;
-            }
-            return fireEvent;
-        }
+        else if(k<60)
+            return new FireEvent(r.nextBoolean());
         else
             return new TemperatureEvent(r.nextInt(50));
     }
