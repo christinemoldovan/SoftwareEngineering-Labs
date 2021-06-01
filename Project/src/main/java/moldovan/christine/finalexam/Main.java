@@ -194,10 +194,14 @@ public class Main {
         }
         System.out.print("\nDo you want to do another operation? ( YES / NO )\nInput:");
         userInput = scanner.nextLine();
+
         if (userInput.toUpperCase().equals("YES"))
             showMenu();
-        else
-            System.exit(0);
+        else {
+            System.out.print("\nDo you want to do another operation? ( YES / NO )\nInput:");
+            userInput = scanner.nextLine();
+        }
+        System.exit(0);
 
     }
 
